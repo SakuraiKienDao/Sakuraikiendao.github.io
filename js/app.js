@@ -34,3 +34,7 @@ function showFunction3() {
 }
 
 console.log(document.documentElement)
+
+
+
+

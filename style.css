@@ -202,40 +202,40 @@ body {
 }
 
 .navTrigger i:nth-child(1) {
-    -webkit-animation: outT 0.8s backwards;
-    animation: outT 0.8s backwards;
+    -webkit-animation: outT 0.3s backwards;
+    animation: outT 0.3s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
 
 .navTrigger i:nth-child(2) {
     margin: 5px 0;
-    -webkit-animation: outM 0.8s backwards;
-    animation: outM 0.8s backwards;
+    -webkit-animation: outM 0.3s backwards;
+    animation: outM 0.3s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
 
 .navTrigger i:nth-child(3) {
-    -webkit-animation: outBtm 0.8s backwards;
-    animation: outBtm 0.8s backwards;
+    -webkit-animation: outBtm 0.3s backwards;
+    animation: outBtm 0.3s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
 
 .navTrigger.active i:nth-child(1) {
-    -webkit-animation: inT 0.8s forwards;
-    animation: inT 0.8s forwards;
+    -webkit-animation: inT 0.3s forwards;
+    animation: inT 0.3s forwards;
 }
 
 .navTrigger.active i:nth-child(2) {
-    -webkit-animation: inM 0.8s forwards;
-    animation: inM 0.8s forwards;
+    -webkit-animation: inM 0.3s forwards;
+    animation: inM 0.3s forwards;
 }
 
 .navTrigger.active i:nth-child(3) {
-    -webkit-animation: inBtm 0.8s forwards;
-    animation: inBtm 0.8s forwards;
+    -webkit-animation: inBtm 0.3s forwards;
+    animation: inBtm 0.3s forwards;
 }
 
 @-webkit-keyframes inM {
@@ -373,6 +373,7 @@ body {
 .affix {
     padding: 0;
     background-color: #333;
+    z-index: 999;
 }
 
 
@@ -477,7 +478,7 @@ footer{
 }
 .contact{
     width: 100%;
-    
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -491,7 +492,7 @@ footer{
 }
 address{
     width: 100%;
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -525,9 +526,31 @@ a.come-out:hover::before{
 .contact a{
     text-decoration: none;
     color: #212121;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin: 15px;
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.contact a i{
+  margin-right: 20px;
+  
+  animation: 2s both ease-in-out infinite;
+}
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+        transform:         translateY(0)
+	}
+	40% {
+        transform:         translateY(-30px)
+	}
+	60% {
+
+		transform:         translateY(-15px)
+	}
+}
+
+.contact a i:hover{
+    animation-name: bounce;
 }
 
 a.come-out{
@@ -555,3 +578,18 @@ a.come-out:hover::before{
     float: right;
 
 }
+
+
+
+
+/* loading */
+/* .loading-area{
+    height: 100vw;
+    width: 100%;
+    z-index: 1000;
+    background: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+} */
