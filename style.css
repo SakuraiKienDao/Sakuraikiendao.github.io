@@ -1,12 +1,34 @@
 
-html,
+html{
+scroll-behavior: smooth;
+scroll-snap-type: y proximity;
+scroll-snap-stop: always;
+/* scroll-snap-points-y: repeat(300px); */
+overflow-y: scroll;
+}
+.scroll-sm{
+    scroll-snap-align: start;
+    scroll-snap-stop: always
+
+}
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'PT Serif', serif;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
+.wallpaper{
+    background-image: url(./img/back-ground.jpg);
+    z-index: -9999;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
 /* Navbar section */
 
 .nav {
@@ -76,7 +98,8 @@ body {
 .home {
     width: 100%;
     height: 100vh;
-    background-image: url(./img/AnyConv.com__IMG_1061.png);
+    background: rgb(133,255,188);
+    background: linear-gradient(180deg, rgba(133,255,188,1) 0%, rgba(3,3,3,0.75) 100%);
     background-position: center top;
     background-size:cover;
     background-repeat: no-repeat;
@@ -370,32 +393,18 @@ body {
     }
 }
 
-.affix {
-    padding: 0;
-    background-color: #333;
-    z-index: 999;
-}
 
-
-/* ---------------------------------- */
-.myport{
-    height: 3400px;
-    padding-top: 120px;
-    background: rgb(174,235,240);
-    background: linear-gradient(180deg, rgba(174,235,240,1) 0%, rgba(198,231,245,1) 70%, rgba(255,255,255,1) 100%);   
-}
-
-
-.myH2 {
+/* form here is about me */
+/* .myH2 {
     text-align:center;
     font-size: 4rem;
     padding-top: 20px;
     margin-top: 0;
     font-family: 'Newsreader', serif;
     user-select: none;
-}
+} */
 
-.avata{
+/* .avata{
     height: 200px;
     width: 100%;
     display: flex;
@@ -404,11 +413,205 @@ body {
     
     
 }
-.avata img{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+*/
+.about{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    align-items: center;
+    overflow-x: hidden;
+    
 }
+
+.avatar{
+    height: 70%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    background: rgba(95, 95, 95, 0.3);
+
+    
+    
+    
+}
+
+.avata img{
+    height: 500px;
+    /* width: 200px; */
+    border-radius: 7%;
+} 
+
+.avata h1{
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+    font-family: 'Yellowtail', cursive;
+    color: rgba(255, 251, 137, 0.76);
+}
+.info{
+    height: 70%;
+    width: 60%;
+    border-radius: 3%;
+    font-size: 1.5rem;
+    background: rgba(95, 95, 95, 0.5);
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 3% 40% 5% 40% 3%;
+    grid-template-rows: 10% 30% auto 30% 10%;
+
+    
+}
+
+.hobby{
+    /* background-color: #00E676; */
+    grid-column: 2/3;
+    grid-row: 2/4;
+    position: relative;
+    justify-content: flex-start;
+    
+} 
+.bas{
+    height: 110px;
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+}
+.voll{
+    position: absolute;
+    bottom: -50px;
+    left: 90px;
+}
+.mus{
+    height: 120px;
+    position: absolute;
+    right: -60px;
+    top: 100px;
+}
+
+
+.text1{
+    width: 100%;
+    
+}
+
+.special{
+/* background: #dd7732; */
+    grid-column: 4/5;
+    grid-row: 3/5;
+
+    position: relative;
+}
+.java{
+    position: absolute;
+    top: -100px;
+    right: 100px;
+}
+.code{
+    height: 80px;
+    position: absolute;
+    left: -30px;
+    bottom: 20px;
+}
+
+.text2{
+    width: 100%;
+    text-align: right;
+}
+
+/* end */
+
+.affix {
+    padding: 0;
+    background-color: #333;
+    z-index: 999;
+}
+
+
+/* ---------------------------------- */
+.mySkill{
+    height: 100vh;
+    width: 100%;
+    background: rgb(3,3,3);
+    background: linear-gradient(180deg,rgba(169,251,246,0.9)  0%, rgba(60,87,84,0.9) 43%, rgba(3,3,3,0.9) 100%);
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 200px;
+    
+
+}
+.nome{
+    display: flex;
+    justify-content: space-between;
+}
+.bar{
+    display: block;
+    width: 400px;
+    height: 3px;
+    background-color: rgba(151, 222, 169, 0.34);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(130, 233, 255, 0.79);
+}
+
+.bar span{
+    height: 3px;
+    float: left;
+    background: linear-gradient(90deg,#ffd33d,#ea4aaa 17%,#b34bff 34%,#01feff 51%,#ffd33d 68%,#ea4aaa 85%,#b34bff);
+    animation: linerrun 2s linear infinite;
+    background-size: 300% 100%;
+
+}
+@keyframes linerrun{
+    0%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0;
+    }
+}
+
+
+.html-pg{
+    width: 97%;
+}
+.css-pg{
+    width: 89%;
+}
+.js-pg{
+    width: 83%;
+}
+.java-pg{
+    width: 77%;
+}
+
+.py-pg{
+    width: 58%;
+}
+.sql-pg{
+    width: 39%;
+}
+
+/* end */
+.myport{
+    height: 100vh;
+    width: 100%;
+    
+    background: rgba(3, 3, 3, 0.9);
+}
+
+
+
+
 .myP {
     text-align: justify;
 }
@@ -418,14 +621,14 @@ body {
   }
 }
 .main-data{
-
+    height: 100vh;
     width: 100%;
 }
 .fist-project,.next-project,.last-project{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: auto;    
+    
+        
     
 
 }
@@ -439,18 +642,18 @@ body {
     animation: fadeEffect 3s;
     margin: 30px;
     font-family: 'Shippori Mincho B1', serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     user-select: none;
 }
 .next-project{
-    height: 1000px;
+    height: auto;
 }
 .conten2{
     position: absolute;
     right: 0;
 }
 .conten1 h3,.conten2 h3,.conten3 h3{
-    font-size: 2.3rem;
+    font-size: 1rem;
 
 }
 
@@ -468,13 +671,17 @@ body {
 
 /* from hear is the footer */
 footer{
-    margin-top: 300px;
+    height: 100vh;
     width: 100%;
     
     padding-bottom: 50px;
-    background-color: #bdbdbd;
+    background: rgb(3,3,3);
+background: linear-gradient(180deg, rgba(3,3,3,0.9) 0%, rgba(3,3,3,1) 10%, rgba(0,0,0,1) 100%);
     font-family: 'PT Serif', serif;
     font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contact{
     width: 100%;
