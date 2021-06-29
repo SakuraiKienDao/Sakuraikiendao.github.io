@@ -449,15 +449,17 @@ body {
 .avata h1{
     display: flex;
     justify-content: space-around;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Yellowtail', cursive;
+    font-size: 5rem;
     color: rgba(255, 251, 137, 0.76);
 }
 .info{
     height: 70%;
     width: 60%;
     border-radius: 3%;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    
     background: rgba(95, 95, 95, 0.5);
     justify-content: center;
     display: grid;
@@ -473,6 +475,7 @@ body {
     grid-row: 2/4;
     position: relative;
     justify-content: flex-start;
+    font-family: 'Kirang Haerang', cursive;
     
 } 
 .bas{
