@@ -604,6 +604,18 @@ body {
     width: 39%;
 }
 
+.commu{
+    width: 500px;
+    height: 500px;
+}
+
+
+
+#commu-pg{
+    width: 200px;
+    height: 200px;
+}
+
 /* end */
 .myport{
     height: 100vh;

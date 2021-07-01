@@ -35,6 +35,37 @@
 
 // console.log(document.documentElement)
 
-
+var circleBar = new ProgressBar.Circle("#commu-pg", {
+    color: "#aaa",
+    strokeWidth: 6,
+    trailWidth: 7,
+    trailColor: "#aaa",
+    easing: "easeInOut",
+    from: { color: "#FF9900", width: 7 },
+    to: { color: "#FF0099", width: 7 },
+    text: {
+      value: '0',
+      className: 'progress-text',
+      style: {
+        color: 'black',
+        position: 'absolute',
+        top: '46%',
+        left: '45%',
+        padding: 0,
+        margin: 0,
+        transform: null
+      }
+    },
+    step: (state, shape) => {
+      shape.path.setAttribute("stroke", state.color);
+      shape.path.setAttribute("stroke-width", state.width);
+      shape.setText(Math.round(shape.value() * 100) + ' %');
+    }
+  });
+  
+  circleBar.animate(0.5, {
+    duration: 1500
+  });
+  
 
 
