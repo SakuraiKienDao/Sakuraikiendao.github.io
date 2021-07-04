@@ -553,7 +553,9 @@ body {
 }
 .nome{
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 10px;
+    justify-content: center;
+
 }
 .bar{
     display: block;
@@ -604,17 +606,70 @@ body {
     width: 39%;
 }
 
-.commu{
-    width: 500px;
-    height: 500px;
+
+/* tag2 */
+.tagname2{
+    padding: 0 200px;
+    width: 30%;
+
 }
-
-
-
-#commu-pg{
+.warp{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:50% 50%;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box4";
+}
+.commu{
     width: 200px;
     height: 200px;
+    margin: 50px auto;
+    grid-area: "box1";
+    
 }
+#commu-pg{
+    position: relative;
+}
+.tw{
+    width: 200px;
+    height: 200px;
+    grid-area: "box2";
+    margin: 50px auto;
+    justify-content: center;
+    
+}
+#tw-pg{
+    position: relative;
+}
+.pm{
+    width: 200px;
+    height: 200px;
+    grid-area: "box3";
+    margin: 50px auto;
+    justify-content: center;
+    
+}
+#pm-pg{
+    position: relative;
+}
+
+.crea{
+    width: 200px;
+    height: 200px;
+    grid-area: "box4";
+    margin: 50px auto;
+    justify-content: center;
+    
+}
+#crea-pg{
+    position: relative;
+}
+
+
+
+
 
 /* end */
 .myport{

@@ -34,15 +34,15 @@
 // }
 
 // console.log(document.documentElement)
-
-var circleBar = new ProgressBar.Circle("#commu-pg", {
+const progress= (id, value)=>{
+var circleBar = new ProgressBar.Circle(id, {
     color: "#aaa",
     strokeWidth: 6,
     trailWidth: 7,
     trailColor: "#aaa",
     easing: "easeInOut",
-    from: { color: "#FF9900", width: 7 },
-    to: { color: "#FF0099", width: 7 },
+    from: { color: "#103cc6", width: 7 },
+    to: { color: "#ed3c3c", width: 7 },
     text: {
       value: '0',
       className: 'progress-text',
@@ -63,9 +63,12 @@ var circleBar = new ProgressBar.Circle("#commu-pg", {
     }
   });
   
-  circleBar.animate(0.5, {
+  circleBar.animate(value, {
     duration: 1500
   });
-  
-
+  }
+progress("#commu-pg", 0.87);
+progress("#tw-pg", 0.5);
+progress("#pm-pg", 0.98);
+progress("#crea-pg", 0.46);
 
